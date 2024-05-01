@@ -55,7 +55,7 @@ app.MapDelete("/SuperHeroes/{id}", async (ApplicationDbContext context, int id) 
 
     context.Heroes.Remove(hero);
         await context.SaveChangesAsync();
-        return Results.Ok(await context.Heroes.ToArrayAsync());
+    return Results.Ok(await context.Heroes.ToArrayAsync());
     
     
     
